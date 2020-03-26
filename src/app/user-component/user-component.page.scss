@@ -1,0 +1,32 @@
+.user_photo {
+    object-fit: cover;
+    width: 100px;
+    height: 100px;
+    margin-right: 5px
+}
+
+.container {
+    overflow: hidden; 
+    white-space: nowrap;
+    ::-webkit-scrollbar {
+      display: none;
+    }
+    .scroll {
+      overflow: scroll;
+    }
+  }
+
+  .single-delete{
+      position: absolute;
+      bottom: 0;
+      right: 3px;
+      font-size: 14px;
+      --border-radius: 65% 0 0 0;
+  }
+
+  .profile-pic {
+    object-fit: cover;
+    width: 35vh;
+    height: 35vh;
+    border-radius: 50%;
+  }

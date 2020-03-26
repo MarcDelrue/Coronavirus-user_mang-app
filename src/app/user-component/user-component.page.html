@@ -1,0 +1,65 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button [text]="buttonText" [icon]="buttonIcon">
+      </ion-back-button>
+    </ion-buttons>
+    <ion-title>User Edit</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card>
+    <div style="text-align: center">
+    <img *ngIf="user.id!=='new-user' && user_photos[0]" class="profile-pic" [src]="user_photos[0]">
+    </div>
+    <ion-card-header>
+      <ion-card-title>
+        <ion-input [(ngModel)]="user.name" (ionFocus)="triedModify = True" (ionBlur)="trySaveUpdates()" placeholder="Insert user full name"></ion-input>
+      </ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <div *ngIf="user.id!=='new-user'; else createUser">
+        <ion-item>
+          <ion-label>Photos</ion-label>
+          <span *ngIf="user && user.photos && user.photos.length > 0">
+            <ion-button (click)="addPhotos()" side="end" fill="clear">
+              <ion-icon name="add"></ion-icon>
+            </ion-button>
+            <ion-button side="end" fill="clear" color="danger" (click)="removeAllPhotos()">
+              <ion-icon name="trash"></ion-icon>
+            </ion-button>
+          </span>
+        </ion-item>
+        <ion-card-content>
+          <ion-button style="display: flex; justify-content: center;"
+            *ngIf="user && user.photos && user.photos.length == 0; else showPhotos" (click)="addPhotos()">Add photos
+          </ion-button>
+          <ng-template #showPhotos>
+            <div class="container">
+              <div class="scroll" scrollX="true">
+                <span *ngFor="let photo of user_photos" style="position: relative;">
+                  <img [src]="photo" class="user_photo">
+                  <ion-button class="single-delete" color="danger" (click)="removePhoto(photo)">
+                    <ion-icon name="trash" ></ion-icon>
+                  </ion-button>
+                </span>
+              </div>
+            </div>
+          </ng-template>
+        </ion-card-content>
+        <ion-item>
+          <ion-label>Search history</ion-label>
+        </ion-item>
+        <ion-card-content>
+          <ion-label *ngIf="!user.search_history">No searches yet</ion-label>
+        </ion-card-content>
+      </div>
+      <ng-template #createUser>
+        <div style="display: flex; justify-content: center;">
+          <ion-button (click)="createNewUser()">Create User</ion-button>
+        </div>
+      </ng-template>
+    </ion-card-content>
+  </ion-card>
+</ion-content>

@@ -1,0 +1,8 @@
+{
+  "name": "Coronavirus-user-app",
+  "integrations": {
+    "capacitor": {},
+    "cordova": {}
+  },
+  "type": "angular"
+}

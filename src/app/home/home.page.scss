@@ -1,0 +1,29 @@
+#container {
+  text-align: center;
+
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.toggle-app {
+  zoom: 2.5;
+}
+
+.align-center {
+  text-align: center
+}
+
+.security-space {
+  margin: 25px
+}
+
+.security-space-vertical {
+  margin: 25px
+}
+
+.bold-text {
+  font-weight: bold
+}
