@@ -1,1 +1,1 @@
-# Coronavirus-user_mang-app
+# Coronavirus-user-manager-app
