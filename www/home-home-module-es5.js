@@ -108,7 +108,7 @@
     /* harmony default export */
 
 
-    __webpack_exports__["default"] = "#container {\n  text-align: center;\n  position: absolute;\n  left: 0;\n  right: 0;\n  top: 50%;\n  -webkit-transform: translateY(-50%);\n          transform: translateY(-50%);\n}\n\n.toggle-app {\n  zoom: 2.5;\n}\n\n.align-center {\n  text-align: center;\n}\n\n.security-space {\n  margin: 25px;\n}\n\n.security-space-vertical {\n  margin: 25px;\n}\n\n.bold-text {\n  font-weight: bold;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9ob21lL21hcmMvUFJPSkVDVFMvQ2hpbmUgMjAxOS0yMDIwL0JKVFUvRW1iZWRkZWQgc3lzdGVtL0FwcC1pbnRlcmZhY2UvQ29yb25hdmlydXMtdXNlci1hcHAvc3JjL2FwcC9ob21lL2hvbWUucGFnZS5zY3NzIiwic3JjL2FwcC9ob21lL2hvbWUucGFnZS5zY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0VBQ0Usa0JBQUE7RUFFQSxrQkFBQTtFQUNBLE9BQUE7RUFDQSxRQUFBO0VBQ0EsUUFBQTtFQUNBLG1DQUFBO1VBQUEsMkJBQUE7QUNBRjs7QURHQTtFQUNFLFNBQUE7QUNBRjs7QURHQTtFQUNFLGtCQUFBO0FDQUY7O0FER0E7RUFDRSxZQUFBO0FDQUY7O0FER0E7RUFDRSxZQUFBO0FDQUY7O0FER0E7RUFDRSxpQkFBQTtBQ0FGIiwiZmlsZSI6InNyYy9hcHAvaG9tZS9ob21lLnBhZ2Uuc2NzcyIsInNvdXJjZXNDb250ZW50IjpbIiNjb250YWluZXIge1xuICB0ZXh0LWFsaWduOiBjZW50ZXI7XG5cbiAgcG9zaXRpb246IGFic29sdXRlO1xuICBsZWZ0OiAwO1xuICByaWdodDogMDtcbiAgdG9wOiA1MCU7XG4gIHRyYW5zZm9ybTogdHJhbnNsYXRlWSgtNTAlKTtcbn1cblxuLnRvZ2dsZS1hcHAge1xuICB6b29tOiAyLjU7XG59XG5cbi5hbGlnbi1jZW50ZXIge1xuICB0ZXh0LWFsaWduOiBjZW50ZXJcbn1cblxuLnNlY3VyaXR5LXNwYWNlIHtcbiAgbWFyZ2luOiAyNXB4XG59XG5cbi5zZWN1cml0eS1zcGFjZS12ZXJ0aWNhbCB7XG4gIG1hcmdpbjogMjVweFxufVxuXG4uYm9sZC10ZXh0IHtcbiAgZm9udC13ZWlnaHQ6IGJvbGRcbn1cbiIsIiNjb250YWluZXIge1xuICB0ZXh0LWFsaWduOiBjZW50ZXI7XG4gIHBvc2l0aW9uOiBhYnNvbHV0ZTtcbiAgbGVmdDogMDtcbiAgcmlnaHQ6IDA7XG4gIHRvcDogNTAlO1xuICB0cmFuc2Zvcm06IHRyYW5zbGF0ZVkoLTUwJSk7XG59XG5cbi50b2dnbGUtYXBwIHtcbiAgem9vbTogMi41O1xufVxuXG4uYWxpZ24tY2VudGVyIHtcbiAgdGV4dC1hbGlnbjogY2VudGVyO1xufVxuXG4uc2VjdXJpdHktc3BhY2Uge1xuICBtYXJnaW46IDI1cHg7XG59XG5cbi5zZWN1cml0eS1zcGFjZS12ZXJ0aWNhbCB7XG4gIG1hcmdpbjogMjVweDtcbn1cblxuLmJvbGQtdGV4dCB7XG4gIGZvbnQtd2VpZ2h0OiBib2xkO1xufSJdfQ== */";
+    __webpack_exports__["default"] = "#container {\n  text-align: center;\n  position: absolute;\n  left: 0;\n  right: 0;\n  top: 50%;\n  -webkit-transform: translateY(-50%);\n          transform: translateY(-50%);\n}\n\n.toggle-app {\n  zoom: 2.5;\n}\n\n.align-center {\n  text-align: center;\n}\n\n.security-space {\n  margin: 25px;\n}\n\n.security-space-vertical {\n  margin: 25px;\n}\n\n.bold-text {\n  font-weight: bold;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9ob21lL21hcmMvUFJPSkVDVFMvQ2hpbmUgMjAxOS0yMDIwL0JKVFUvRW1iZWRkZWQgc3lzdGVtL0Nvcm9uYXZpcnVzLXVzZXItbWFuYWdlci1hcHAvc3JjL2FwcC9ob21lL2hvbWUucGFnZS5zY3NzIiwic3JjL2FwcC9ob21lL2hvbWUucGFnZS5zY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0VBQ0Usa0JBQUE7RUFFQSxrQkFBQTtFQUNBLE9BQUE7RUFDQSxRQUFBO0VBQ0EsUUFBQTtFQUNBLG1DQUFBO1VBQUEsMkJBQUE7QUNBRjs7QURHQTtFQUNFLFNBQUE7QUNBRjs7QURHQTtFQUNFLGtCQUFBO0FDQUY7O0FER0E7RUFDRSxZQUFBO0FDQUY7O0FER0E7RUFDRSxZQUFBO0FDQUY7O0FER0E7RUFDRSxpQkFBQTtBQ0FGIiwiZmlsZSI6InNyYy9hcHAvaG9tZS9ob21lLnBhZ2Uuc2NzcyIsInNvdXJjZXNDb250ZW50IjpbIiNjb250YWluZXIge1xuICB0ZXh0LWFsaWduOiBjZW50ZXI7XG5cbiAgcG9zaXRpb246IGFic29sdXRlO1xuICBsZWZ0OiAwO1xuICByaWdodDogMDtcbiAgdG9wOiA1MCU7XG4gIHRyYW5zZm9ybTogdHJhbnNsYXRlWSgtNTAlKTtcbn1cblxuLnRvZ2dsZS1hcHAge1xuICB6b29tOiAyLjU7XG59XG5cbi5hbGlnbi1jZW50ZXIge1xuICB0ZXh0LWFsaWduOiBjZW50ZXJcbn1cblxuLnNlY3VyaXR5LXNwYWNlIHtcbiAgbWFyZ2luOiAyNXB4XG59XG5cbi5zZWN1cml0eS1zcGFjZS12ZXJ0aWNhbCB7XG4gIG1hcmdpbjogMjVweFxufVxuXG4uYm9sZC10ZXh0IHtcbiAgZm9udC13ZWlnaHQ6IGJvbGRcbn1cbiIsIiNjb250YWluZXIge1xuICB0ZXh0LWFsaWduOiBjZW50ZXI7XG4gIHBvc2l0aW9uOiBhYnNvbHV0ZTtcbiAgbGVmdDogMDtcbiAgcmlnaHQ6IDA7XG4gIHRvcDogNTAlO1xuICB0cmFuc2Zvcm06IHRyYW5zbGF0ZVkoLTUwJSk7XG59XG5cbi50b2dnbGUtYXBwIHtcbiAgem9vbTogMi41O1xufVxuXG4uYWxpZ24tY2VudGVyIHtcbiAgdGV4dC1hbGlnbjogY2VudGVyO1xufVxuXG4uc2VjdXJpdHktc3BhY2Uge1xuICBtYXJnaW46IDI1cHg7XG59XG5cbi5zZWN1cml0eS1zcGFjZS12ZXJ0aWNhbCB7XG4gIG1hcmdpbjogMjVweDtcbn1cblxuLmJvbGQtdGV4dCB7XG4gIGZvbnQtd2VpZ2h0OiBib2xkO1xufSJdfQ== */";
     /***/
   },
 
@@ -163,18 +163,26 @@
     "./src/services/firebase.service.ts");
 
     let HomePage = class HomePage {
-      constructor(router, alertController, fireStore) {
+      constructor(router, alertController, fireStore, loadingController) {
         this.router = router;
         this.alertController = alertController;
         this.fireStore = fireStore;
+        this.loadingController = loadingController;
       }
 
       ngOnInit() {
-        this.allUsers = this.fireStore.getUsers().valueChanges();
+        // this.presentLoading()
+        this.allUsers = this.fireStore.getUsers().valueChanges().subscribe(() => {});
         this.fireStore.getSwitchState().valueChanges().subscribe(data => {
           this.switchState = data[0].is_launched;
         });
-      }
+      } // async presentLoading() {
+      //   this.loading = await this.loadingController.create({
+      //     message: 'Please wait...',
+      //   });
+      //   await this.loading.present();
+      // }
+
 
       goToUserEdit(id) {
         this.router.navigate(['/user', id]);
@@ -200,6 +208,7 @@
       }
 
       confirmDeleteUser(user) {
+        this.fireStore.deleteAllImagesFromUser(user);
         this.fireStore.deleteUser(user);
       }
 
@@ -215,6 +224,8 @@
       type: _ionic_angular__WEBPACK_IMPORTED_MODULE_3__["AlertController"]
     }, {
       type: _services_firebase_service__WEBPACK_IMPORTED_MODULE_4__["FirebaseService"]
+    }, {
+      type: _ionic_angular__WEBPACK_IMPORTED_MODULE_3__["LoadingController"]
     }];
 
     HomePage = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
@@ -225,7 +236,7 @@
       styles: [tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(
       /*! ./home.page.scss */
       "./src/app/home/home.page.scss")).default]
-    }), tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_angular_router__WEBPACK_IMPORTED_MODULE_2__["Router"], _ionic_angular__WEBPACK_IMPORTED_MODULE_3__["AlertController"], _services_firebase_service__WEBPACK_IMPORTED_MODULE_4__["FirebaseService"]])], HomePage);
+    }), tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_angular_router__WEBPACK_IMPORTED_MODULE_2__["Router"], _ionic_angular__WEBPACK_IMPORTED_MODULE_3__["AlertController"], _services_firebase_service__WEBPACK_IMPORTED_MODULE_4__["FirebaseService"], _ionic_angular__WEBPACK_IMPORTED_MODULE_3__["LoadingController"]])], HomePage);
     /***/
   }
 }]);

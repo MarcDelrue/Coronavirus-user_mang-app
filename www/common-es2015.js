@@ -650,13 +650,19 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
 /* harmony import */ var angularfire2_firestore__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! angularfire2/firestore */ "./node_modules/angularfire2/firestore/index.js");
 /* harmony import */ var angularfire2_firestore__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(angularfire2_firestore__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _angular_fire_database__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/fire/database */ "./node_modules/@angular/fire/database/es2015/index.js");
+/* harmony import */ var _angular_fire_storage__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/fire/storage */ "./node_modules/@angular/fire/storage/es2015/index.js");
+
+
 
 
 
 let FirebaseService = class FirebaseService {
-    constructor(firestore) {
+    constructor(firestore, afDB, afSG) {
         this.firestore = firestore;
-        this.storage_URL = "gs://coronavirus-user-data.appspot.com/";
+        this.afDB = afDB;
+        this.afSG = afSG;
+        this.storage_URL = "coronavirus-user-data.appspot.com/";
     }
     getUsers() {
         return this.firestore.collection('user_data');
@@ -690,21 +696,25 @@ let FirebaseService = class FirebaseService {
     getSwitchState() {
         return this.firestore.collection('python_function');
     }
-    removeAllImagesFromUser(user) {
+    deleteAllImagesFromUser(all_images) {
+        for (let image in all_images) {
+            this.deleteImage(image);
+        }
     }
-    removeImage(image) {
-        // this.firestore.
-        // return this.firestore.storage().ref().child(image).delete()
+    deleteImage(image) {
+        return this.afSG.ref(image).delete();
     }
 };
 FirebaseService.ctorParameters = () => [
-    { type: angularfire2_firestore__WEBPACK_IMPORTED_MODULE_2__["AngularFirestore"] }
+    { type: angularfire2_firestore__WEBPACK_IMPORTED_MODULE_2__["AngularFirestore"] },
+    { type: _angular_fire_database__WEBPACK_IMPORTED_MODULE_3__["AngularFireDatabase"] },
+    { type: _angular_fire_storage__WEBPACK_IMPORTED_MODULE_4__["AngularFireStorage"] }
 ];
 FirebaseService = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
     Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Injectable"])({
         providedIn: 'root'
     }),
-    tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [angularfire2_firestore__WEBPACK_IMPORTED_MODULE_2__["AngularFirestore"]])
+    tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [angularfire2_firestore__WEBPACK_IMPORTED_MODULE_2__["AngularFirestore"], _angular_fire_database__WEBPACK_IMPORTED_MODULE_3__["AngularFireDatabase"], _angular_fire_storage__WEBPACK_IMPORTED_MODULE_4__["AngularFireStorage"]])
 ], FirebaseService);
 
 

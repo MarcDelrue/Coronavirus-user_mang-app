@@ -8,6 +8,10 @@ const routes: Routes = [
     path: 'user',
     loadChildren: () => import('./user-component/user-component.module').then( m => m.UserComponentPageModule)
   },
+  {
+    path: 'qr-coded',
+    loadChildren: () => import('./qr-coded/qr-coded.module').then( m => m.QrCodedPageModule)
+  },
 ];
 
 @NgModule({

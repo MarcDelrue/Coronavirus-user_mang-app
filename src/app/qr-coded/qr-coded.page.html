@@ -1,0 +1,11 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Security check</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content *ngIf="value">
+  <DIV style="text-align: center" class="aclass">Show to camera
+    <qrcode [qrdata]="value" [size]="256" [errorCorrectionLevel]="'M'" scale="10"></qrcode>
+  </DIV>
+</ion-content>

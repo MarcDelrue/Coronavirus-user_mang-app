@@ -17,9 +17,13 @@
     <ion-list-header>
       <ion-label>Recognized user</ion-label>
     </ion-list-header>
-    <ion-item *ngFor="let user of allUsers | async">
+    <ion-item *ngFor="let user of allUsers">
+      <ion-icon name="lock-closed" *ngIf="!user.accept_modify_account; else unlock"></ion-icon>
+      <ng-template #unlock>
+      <ion-icon name="lock-open-outline"></ion-icon>
+      </ng-template>
       <ion-label>{{user.name}}</ion-label>
-      <ion-button side="end" fill="clear" (click)="goToUserEdit(user.id)">
+      <ion-button side="end" fill="clear" (click)="goToUserEdit(user)">
         <ion-icon color="primary" name="pencil"></ion-icon>
       </ion-button>
       <ion-button side="end" fill="clear" (click)="deleteUser(user)">

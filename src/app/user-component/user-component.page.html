@@ -11,11 +11,12 @@
 <ion-content>
   <ion-card>
     <div style="text-align: center">
-    <img *ngIf="user.id!=='new-user' && user_photos[0]" class="profile-pic" [src]="user_photos[0]">
+      <img *ngIf="user.id!=='new-user' && user_photos[0]" class="profile-pic" [src]="user_photos[0]">
     </div>
     <ion-card-header>
       <ion-card-title>
-        <ion-input [(ngModel)]="user.name" (ionFocus)="triedModify = True" (ionBlur)="trySaveUpdates()" placeholder="Insert user full name"></ion-input>
+        <ion-input [(ngModel)]="user.name" (ionFocus)="triedModify = True" (ionBlur)="trySaveUpdates()"
+          placeholder="Insert user full name"></ion-input>
       </ion-card-title>
     </ion-card-header>
     <ion-card-content>
@@ -38,10 +39,10 @@
           <ng-template #showPhotos>
             <div class="container">
               <div class="scroll" scrollX="true">
-                <span *ngFor="let photo of user_photos" style="position: relative;">
+                <span *ngFor="let photo of user_photos; let i=index" style="position: relative;">
                   <img [src]="photo" class="user_photo">
-                  <ion-button class="single-delete" color="danger" (click)="removePhoto(photo)">
-                    <ion-icon name="trash" ></ion-icon>
+                  <ion-button class="single-delete" color="danger" (click)="removePhoto(photo, i)">
+                    <ion-icon name="trash"></ion-icon>
                   </ion-button>
                 </span>
               </div>
@@ -56,6 +57,11 @@
         </ion-card-content>
       </div>
       <ng-template #createUser>
+        <ion-item lines="none">
+          <ion-label>Securize account with phone ID</ion-label>
+          <ion-checkbox [(ngModel)]="uid_verif">
+          </ion-checkbox>
+        </ion-item>
         <div style="display: flex; justify-content: center;">
           <ion-button (click)="createNewUser()">Create User</ion-button>
         </div>

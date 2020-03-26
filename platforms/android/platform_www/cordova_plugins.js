@@ -39,6 +39,14 @@ cordova.define('cordova/plugin_list', function(require, exports, module) {
       "clobbers": [
         "window.Keyboard"
       ]
+    },
+    {
+      "id": "cordova-plugin-uniquedeviceid.UniqueDeviceID",
+      "file": "plugins/cordova-plugin-uniquedeviceid/www/uniqueid.js",
+      "pluginId": "cordova-plugin-uniquedeviceid",
+      "merges": [
+        "window.plugins.uniqueDeviceID"
+      ]
     }
   ];
   module.exports.metadata = {
@@ -47,6 +55,8 @@ cordova.define('cordova/plugin_list', function(require, exports, module) {
     "cordova-plugin-device": "2.0.2",
     "cordova-plugin-splashscreen": "5.0.2",
     "cordova-plugin-ionic-webview": "4.1.3",
-    "cordova-plugin-ionic-keyboard": "2.2.0"
+    "cordova-plugin-ionic-keyboard": "2.2.0",
+    "cordova-plugin-uniquedeviceid": "1.3.2",
+    "cordova-plugin-vibration": "3.1.1"
   };
 });

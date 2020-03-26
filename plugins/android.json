@@ -25,6 +25,12 @@
     },
     "cordova-plugin-ionic-keyboard": {
       "PACKAGE_NAME": "io.ionic.starter"
+    },
+    "cordova-plugin-uniquedeviceid": {
+      "PACKAGE_NAME": "io.ionic.starter"
+    },
+    "cordova-plugin-vibration": {
+      "PACKAGE_NAME": "io.ionic.starter"
     }
   },
   "dependent_plugins": {}

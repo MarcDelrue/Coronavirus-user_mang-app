@@ -1003,16 +1003,36 @@
     /* harmony import */
 
 
-    var _credentials__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(
+    var _angular_fire_storage__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(
+    /*! @angular/fire/storage */
+    "./node_modules/@angular/fire/storage/es2015/index.js");
+    /* harmony import */
+
+
+    var _angular_fire_database__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(
+    /*! @angular/fire/database */
+    "./node_modules/@angular/fire/database/es2015/index.js");
+    /* harmony import */
+
+
+    var _credentials__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(
     /*! ./credentials */
     "./src/app/credentials.ts");
+    /* harmony import */
+
+
+    var _ionic_native_unique_device_id_ngx__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(
+    /*! @ionic-native/unique-device-id/ngx */
+    "./node_modules/@ionic-native/unique-device-id/ngx/index.js"); // pour accéder aux fonction de stockage et de récupération des fichiers
+    // pour manipuler la base de données Firebase
+
 
     let AppModule = class AppModule {};
     AppModule = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["NgModule"])({
       declarations: [_app_component__WEBPACK_IMPORTED_MODULE_7__["AppComponent"]],
       entryComponents: [],
-      imports: [_angular_platform_browser__WEBPACK_IMPORTED_MODULE_2__["BrowserModule"], _ionic_angular__WEBPACK_IMPORTED_MODULE_4__["IonicModule"].forRoot(), _app_routing_module__WEBPACK_IMPORTED_MODULE_8__["AppRoutingModule"], angularfire2__WEBPACK_IMPORTED_MODULE_9__["AngularFireModule"].initializeApp(_credentials__WEBPACK_IMPORTED_MODULE_11__["firebaseConfig"]), angularfire2_firestore__WEBPACK_IMPORTED_MODULE_10__["AngularFirestoreModule"]],
-      providers: [_ionic_native_status_bar_ngx__WEBPACK_IMPORTED_MODULE_6__["StatusBar"], _ionic_native_splash_screen_ngx__WEBPACK_IMPORTED_MODULE_5__["SplashScreen"], {
+      imports: [_angular_platform_browser__WEBPACK_IMPORTED_MODULE_2__["BrowserModule"], _ionic_angular__WEBPACK_IMPORTED_MODULE_4__["IonicModule"].forRoot(), _app_routing_module__WEBPACK_IMPORTED_MODULE_8__["AppRoutingModule"], angularfire2__WEBPACK_IMPORTED_MODULE_9__["AngularFireModule"].initializeApp(_credentials__WEBPACK_IMPORTED_MODULE_13__["firebaseConfig"]), angularfire2_firestore__WEBPACK_IMPORTED_MODULE_10__["AngularFirestoreModule"], _angular_fire_database__WEBPACK_IMPORTED_MODULE_12__["AngularFireDatabaseModule"], _angular_fire_storage__WEBPACK_IMPORTED_MODULE_11__["AngularFireStorageModule"]],
+      providers: [_ionic_native_status_bar_ngx__WEBPACK_IMPORTED_MODULE_6__["StatusBar"], _ionic_native_splash_screen_ngx__WEBPACK_IMPORTED_MODULE_5__["SplashScreen"], _ionic_native_unique_device_id_ngx__WEBPACK_IMPORTED_MODULE_14__["UniqueDeviceID"], {
         provide: _angular_router__WEBPACK_IMPORTED_MODULE_3__["RouteReuseStrategy"],
         useClass: _ionic_angular__WEBPACK_IMPORTED_MODULE_4__["IonicRouteStrategy"]
       }],
@@ -1177,7 +1197,7 @@
   /***/
   function _(module, exports, __webpack_require__) {
     module.exports = __webpack_require__(
-    /*! /home/marc/PROJECTS/Chine 2019-2020/BJTU/Embedded system/App-interface/Coronavirus-user-app/src/main.ts */
+    /*! /home/marc/PROJECTS/Chine 2019-2020/BJTU/Embedded system/Coronavirus-user-manager-app/src/main.ts */
     "./src/main.ts");
     /***/
   }

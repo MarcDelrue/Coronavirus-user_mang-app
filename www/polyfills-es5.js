@@ -20503,7 +20503,7 @@
   /***/
   function _(module, exports, __webpack_require__) {
     __webpack_require__(
-    /*! /home/marc/PROJECTS/Chine 2019-2020/BJTU/Embedded system/App-interface/Coronavirus-user-app/node_modules/@angular-devkit/build-angular/src/angular-cli-files/models/es5-polyfills.js */
+    /*! /home/marc/PROJECTS/Chine 2019-2020/BJTU/Embedded system/Coronavirus-user-manager-app/node_modules/@angular-devkit/build-angular/src/angular-cli-files/models/es5-polyfills.js */
     "./node_modules/@angular-devkit/build-angular/src/angular-cli-files/models/es5-polyfills.js");
 
     __webpack_require__(
@@ -20511,15 +20511,15 @@
     "./node_modules/zone.js/dist/zone-legacy.js");
 
     __webpack_require__(
-    /*! /home/marc/PROJECTS/Chine 2019-2020/BJTU/Embedded system/App-interface/Coronavirus-user-app/node_modules/@angular-devkit/build-angular/src/angular-cli-files/models/jit-polyfills.js */
+    /*! /home/marc/PROJECTS/Chine 2019-2020/BJTU/Embedded system/Coronavirus-user-manager-app/node_modules/@angular-devkit/build-angular/src/angular-cli-files/models/jit-polyfills.js */
     "./node_modules/@angular-devkit/build-angular/src/angular-cli-files/models/jit-polyfills.js");
 
     __webpack_require__(
-    /*! /home/marc/PROJECTS/Chine 2019-2020/BJTU/Embedded system/App-interface/Coronavirus-user-app/node_modules/@angular-devkit/build-angular/src/angular-cli-files/models/es5-jit-polyfills.js */
+    /*! /home/marc/PROJECTS/Chine 2019-2020/BJTU/Embedded system/Coronavirus-user-manager-app/node_modules/@angular-devkit/build-angular/src/angular-cli-files/models/es5-jit-polyfills.js */
     "./node_modules/@angular-devkit/build-angular/src/angular-cli-files/models/es5-jit-polyfills.js");
 
     module.exports = __webpack_require__(
-    /*! /home/marc/PROJECTS/Chine 2019-2020/BJTU/Embedded system/App-interface/Coronavirus-user-app/src/polyfills.ts */
+    /*! /home/marc/PROJECTS/Chine 2019-2020/BJTU/Embedded system/Coronavirus-user-manager-app/src/polyfills.ts */
     "./src/polyfills.ts");
     /***/
   }

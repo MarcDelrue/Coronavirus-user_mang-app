@@ -1,6 +1,8 @@
 import { Injectable } from '@angular/core';
 import * as firebase from 'firebase/app';
 import { AngularFirestore } from 'angularfire2/firestore';
+import { AngularFireDatabase } from '@angular/fire/database';
+import { AngularFireStorage } from '@angular/fire/storage';
 import { User } from '../models/user.interface';
 
 @Injectable({
@@ -8,9 +10,9 @@ import { User } from '../models/user.interface';
 })
 export class FirebaseService {
 
-  constructor(public firestore: AngularFirestore) { }
+  constructor(public firestore: AngularFirestore, public afDB: AngularFireDatabase, public afSG: AngularFireStorage) { }
 
-  storage_URL = "gs://coronavirus-user-data.appspot.com/";
+  storage_URL = "coronavirus-user-data.appspot.com/";
 
   getUsers() {
     return this.firestore.collection('user_data');
@@ -22,20 +24,25 @@ export class FirebaseService {
 
   createUser(
     name: string,
+    uid: string
   ) {
     const id = this.firestore.createId();
+    let accept_modify_account
+    uid != "" ? accept_modify_account = false : accept_modify_account = true
 
-  return this.firestore.collection('user_data').doc(id).set({
-    id,
-    name,
-    request_photos: false,
-    search_history: [],
-    photos: [],
-    created_at: new Date(),
-    updated_at: new Date()
-  }).then(data=>{
-    return id
-  });
+    return this.firestore.collection('user_data').doc(id).set({
+      id,
+      name,
+      uid,
+      accept_modify_account,
+      request_photos: false,
+      search_history: [],
+      photos: [],
+      created_at: new Date(),
+      updated_at: new Date()
+    }).then(data => {
+      return id
+    });
   }
 
   deleteUser(user) {
@@ -47,19 +54,20 @@ export class FirebaseService {
   }
 
   switchProgramStatus(newState) {
-    return this.firestore.collection("python_function").doc("g9y4AYxRUFBkTnUDvxW2").update({is_launched : newState})
+    return this.firestore.collection("python_function").doc("g9y4AYxRUFBkTnUDvxW2").update({ is_launched: newState })
   }
 
-  getSwitchState(){
+  getSwitchState() {
     return this.firestore.collection('python_function');
   }
 
-  removeAllImagesFromUser(user) {
-
+  deleteAllImagesFromUser(all_images) {
+    for(let image in all_images) {
+      this.deleteImage(image)
+    }
   }
 
-  removeImage(image) {
-    // this.firestore.
-    // return this.firestore.storage().ref().child(image).delete()
+  deleteImage(image) {
+    return this.afSG.ref(image).delete()
   }
 }
