@@ -56,7 +56,31 @@
           <ion-label>Search history</ion-label>
         </ion-item>
         <ion-card-content>
-          <ion-label *ngIf="!user.search_history">No searches yet</ion-label>
+          <ion-label *ngIf="user.search_history.length === 0; else historyList">No searches yet</ion-label>
+          <ng-template #historyList style="height: 150px">
+            <ion-grid style="text-align: center;" fixed="true">
+              <ion-row>
+                <ion-col>Date</ion-col>
+                <ion-col>Data type</ion-col>
+                <ion-col>Number</ion-col>
+                <ion-col>Place</ion-col>
+              </ion-row>
+              <ion-row *ngFor="let line of user.search_history">
+                <ion-col>
+                  {{line.time.toDate() | date:"MM/dd h:mm"}}
+                </ion-col>
+                <ion-col>
+                  {{line.data_type}}
+                </ion-col>
+                <ion-col>
+                  {{line.number}}
+                </ion-col>
+                <ion-col>
+                  {{line.place | titlecase }}
+                </ion-col>
+              </ion-row>
+            </ion-grid>
+          </ng-template>
         </ion-card-content>
       </div>
       <ng-template #createUser>
