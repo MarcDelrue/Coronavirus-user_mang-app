@@ -7,6 +7,7 @@ import * as firebase from 'firebase/app';
 import { UniqueDeviceID } from '@ionic-native/unique-device-id/ngx';
 import { User } from "../../models/user.interface";
 import 'firebase/storage';
+import { LoadingController } from '@ionic/angular';
 
 @Component({
   selector: 'app-user-component',
@@ -15,8 +16,9 @@ import 'firebase/storage';
 })
 export class UserComponentPage implements OnInit {
 
-  constructor(private route: ActivatedRoute, private navCtrl: NavController, private fireStore: FirebaseService, private alert: AlertController, private uniqueDeviceID: UniqueDeviceID) { }
+  constructor(private route: ActivatedRoute, private navCtrl: NavController, private fireStore: FirebaseService, private alert: AlertController, private uniqueDeviceID: UniqueDeviceID, public loadingController: LoadingController) { }
 
+  loading: any;
   user: any = {
     id: "new-user",
     name: "",
@@ -28,17 +30,35 @@ export class UserComponentPage implements OnInit {
 
   ngOnInit() {
     this.route.params.subscribe(params => {
-      console.log(params)
       if (params.id !== "new-user") {
         this.getUserDataAndWatch(params.id).subscribe(data => {
-          this.user = data;
-          if (this.user.photos.length > 0)
-            this.getUserPhotos()
-          else
-            this.user_photos.push('./assets/user.png')
+          this.setNewData(data);
         });
       }
     })
+  }
+
+  setNewData(data) {
+    this.user = data;
+    if (this.user && (this.user.request_train === true || this.user.request_photos === true )) {
+      this.presentLoading()
+    } else {
+      try {
+        this.loading.dismiss()
+      } catch (error) {
+      }
+    }
+    if (this.user && this.user.photos && this.user.photos.length > 0)
+      this.getUserPhotos()
+    else
+      this.user_photos.push('./assets/user.png')
+  }
+
+  async presentLoading() {
+      this.loading = await this.loadingController.create({
+        message: 'Please wait ...',
+      });
+      return await this.loading.present();
   }
 
   getUserDataAndWatch(id) {
@@ -77,6 +97,11 @@ export class UserComponentPage implements OnInit {
     await alert.present();
   }
 
+  requestTraining() {
+    this.user.request_train = true
+    this.saveUpdates()
+  }
+
   trySaveUpdates() {
     if (this.triedModify)
       this.saveUpdates()
@@ -88,12 +113,15 @@ export class UserComponentPage implements OnInit {
   }
 
   finishCreateUser() {
-    this.fireStore.createUser(this.user.name, this.user.uid).then((id) => {
-      this.getUserDataAndWatch(id).subscribe(data => {
-        this.user = data;
-      })
-    }
-    );
+    this.fireStore.getUsers().get().subscribe((snap)=>{
+      this.fireStore.createUser(this.user.name, this.user.uid, (snap.size + 1).toString()).then((id) => {
+        console.log(id)
+        this.getUserDataAndWatch(id).subscribe(data => {
+          this.setNewData(data);
+        })
+      }
+      );
+    })
   }
 
   createNewUser() {
@@ -114,8 +142,8 @@ export class UserComponentPage implements OnInit {
     }
   }
 
-  removePhoto(photo, index) {
-    this.fireStore.deleteImage(this.user.photos[index]);
+  removePhoto(index) {
+    this.fireStore.deleteImage(this.user.photos[index])
     this.user_photos.splice(index, 1)
     this.user.photos.splice(index, 1)
     this.saveUpdates()

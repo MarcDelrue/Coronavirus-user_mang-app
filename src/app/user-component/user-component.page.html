@@ -1,7 +1,7 @@
 <ion-header>
   <ion-toolbar>
     <ion-buttons slot="start">
-      <ion-back-button [text]="buttonText" [icon]="buttonIcon">
+      <ion-back-button [text]="buttonText" [icon]="buttonIcon" defaultHref="home">
       </ion-back-button>
     </ion-buttons>
     <ion-title>User Edit</ion-title>
@@ -22,7 +22,7 @@
     <ion-card-content>
       <div *ngIf="user.id!=='new-user'; else createUser">
         <ion-item>
-          <ion-label>Photos</ion-label>
+          <ion-label>Photos ({{user.photos.length}}/30)</ion-label>
           <span *ngIf="user && user.photos && user.photos.length > 0">
             <ion-button (click)="addPhotos()" side="end" fill="clear">
               <ion-icon name="add"></ion-icon>
@@ -41,11 +41,14 @@
               <div class="scroll" scrollX="true">
                 <span *ngFor="let photo of user_photos; let i=index" style="position: relative;">
                   <img [src]="photo" class="user_photo">
-                  <ion-button class="single-delete" color="danger" (click)="removePhoto(photo, i)">
+                  <ion-button class="single-delete" color="danger" (click)="removePhoto(i)">
                     <ion-icon name="trash"></ion-icon>
                   </ion-button>
                 </span>
               </div>
+            </div>
+            <div style="text-align: center">
+              <ion-button (click)="requestTraining()">Request photos training</ion-button>
             </div>
           </ng-template>
         </ion-card-content>

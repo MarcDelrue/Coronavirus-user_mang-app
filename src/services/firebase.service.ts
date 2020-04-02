@@ -24,10 +24,10 @@ export class FirebaseService {
 
   createUser(
     name: string,
-    uid: string
+    uid: string,
+    id
   ) {
-    const id = this.firestore.createId();
-    let accept_modify_account
+    let accept_modify_account: any
     uid != "" ? accept_modify_account = false : accept_modify_account = true
 
     return this.firestore.collection('user_data').doc(id).set({
@@ -36,6 +36,8 @@ export class FirebaseService {
       uid,
       accept_modify_account,
       request_photos: false,
+      request_security_check: false,
+      request_train: false,
       search_history: [],
       photos: [],
       created_at: new Date(),
@@ -50,6 +52,7 @@ export class FirebaseService {
   }
 
   updateUser(user) {
+    console.log(user.request_security_check)
     return this.firestore.collection('user_data').doc(user.id).update(user);
   }
 
@@ -62,7 +65,7 @@ export class FirebaseService {
   }
 
   deleteAllImagesFromUser(all_images) {
-    for(let image in all_images) {
+    for (let image of all_images) {
       this.deleteImage(image)
     }
   }

@@ -56,6 +56,7 @@ cordova.define('cordova/plugin_list', function(require, exports, module) {
     "cordova-plugin-splashscreen": "5.0.2",
     "cordova-plugin-ionic-webview": "4.1.3",
     "cordova-plugin-ionic-keyboard": "2.2.0",
-    "cordova-plugin-uniquedeviceid": "1.3.2"
+    "cordova-plugin-uniquedeviceid": "1.3.2",
+    "cordova-plugin-vibration": "3.1.1"
   };
 });
