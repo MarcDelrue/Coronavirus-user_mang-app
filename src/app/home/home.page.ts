@@ -31,6 +31,10 @@ export class HomePage {
     });
   }
 
+  returnSwitchState() {
+    return this.switchState
+  }
+
   goToUserEdit(user) {
     if (user.accept_modify_account === false) {
       this.presentModal(user)

@@ -23,17 +23,17 @@
       <ion-icon name="lock-open-outline"></ion-icon>
       </ng-template>
       <ion-label>{{user.name}}</ion-label>
-      <ion-button side="end" fill="clear" (click)="goToUserEdit(user)">
+      <ion-button side="end" fill="clear" (click)="goToUserEdit(user)" [disabled]="switchState">
         <ion-icon color="primary" name="pencil"></ion-icon>
       </ion-button>
-      <ion-button side="end" fill="clear" (click)="deleteUser(user)">
+      <ion-button side="end" fill="clear" (click)="deleteUser(user)" [disabled]="switchState">
         <ion-icon color="danger" name="trash"></ion-icon>
       </ion-button>
     </ion-item>
   </ion-list>
   <div>
   <ion-fab horizontal="center" style="margin-top: 25px; margin-bottom: 25px">
-    <ion-fab-button (click)="goToUserEdit('new-user')">
+    <ion-fab-button (click)="goToUserEdit('new-user')" [disabled]="switchState">
       <ion-icon name="add"></ion-icon>
     </ion-fab-button>
   </ion-fab>
